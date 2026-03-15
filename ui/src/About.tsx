@@ -1,10 +1,14 @@
 import type { Component } from 'solid-js';
+import { Title, Meta } from '@solidjs/meta';
 import { createMediaQuery } from '@solid-primitives/media';
 
 const About: Component = () => {
   const isMobile = createMediaQuery("(max-width: 768px)");
   return (
-    <div style={{ "background-color": "#ffffff", color: "#111827", padding: isMobile() ? "4rem 1.5rem" : "8rem 3rem", "min-height": "calc(100vh - 81px)" }}>
+    <>
+      <Title>Our Philosophy | Auric Lapis Flooring</Title>
+      <Meta name="description" content="Discover the Auric Lapis philosophy. We are a team of master craftsmen dedicated to minimalist design and exquisite flooring materials." />
+      <div style={{ "background-color": "#ffffff", color: "#111827", padding: isMobile() ? "4rem 1.5rem" : "8rem 3rem", "min-height": "calc(100vh - 81px)" }}>
       <div style={{ "max-width": "80rem", margin: "0 auto" }}>
         <div style={{ display: "grid", "grid-template-columns": isMobile() ? "1fr" : "1fr 1fr", gap: isMobile() ? "3rem" : "6rem", "align-items": "center" }}>
           <div>
@@ -28,7 +32,8 @@ const About: Component = () => {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 };
 

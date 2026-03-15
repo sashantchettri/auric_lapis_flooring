@@ -1,6 +1,7 @@
 import type { Component } from 'solid-js';
 import { createSignal } from 'solid-js';
 import { createMediaQuery } from '@solid-primitives/media';
+import { Title, Meta } from '@solidjs/meta';
 
 const Quote: Component = () => {
   const [submitted, setSubmitted] = createSignal(false);
@@ -43,7 +44,10 @@ const Quote: Component = () => {
   };
 
   return (
-    <div style={{ "background-color": "#f9fafb", color: "#111827", padding: isMobile() ? "4rem 1.5rem" : "6rem 2rem", "min-height": "calc(100vh - 81px)", display: "flex", "align-items": "center", "justify-content": "center", "box-sizing": "border-box" }}>
+    <>
+      <Title>Get an Estimate | Auric Lapis Flooring</Title>
+      <Meta name="description" content="Start your project with Auric Lapis. Share your vision with us and request a free, no-obligation premium flooring estimate today." />
+      <div style={{ "background-color": "#f9fafb", color: "#111827", padding: isMobile() ? "4rem 1.5rem" : "6rem 2rem", "min-height": "calc(100vh - 81px)", display: "flex", "align-items": "center", "justify-content": "center", "box-sizing": "border-box" }}>
       <div style={{ "max-width": "32rem", width: "100%", "background-color": "#ffffff", padding: isMobile() ? "2rem 1.5rem" : "3rem", "border-radius": "8px", "box-shadow": "0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025)", border: "1px solid #f3f4f6", "box-sizing": "border-box" }}>
         <h1 style={{ "font-size": isMobile() ? "2rem" : "2.5rem", "font-weight": "800", "margin-bottom": "0.5rem", "text-align": "center", "letter-spacing": "-0.04em" }}>
           Start a Project
@@ -100,8 +104,9 @@ const Quote: Component = () => {
             </button>
           </form>
         )}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
