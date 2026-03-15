@@ -1,8 +1,6 @@
 import { Component, For } from 'solid-js';
-import { createMediaQuery } from '@solid-primitives/media';
 
 const Services: Component = () => {
-  const isMobile = createMediaQuery("(max-width: 768px)");
   const services = [
     {
       title: "Hybrid Flooring",
@@ -25,30 +23,26 @@ const Services: Component = () => {
   ];
 
   return (
-    <section id="services" style={{ "background-color": "#f9fafb", color: "#111827", padding: isMobile() ? "4rem 1.5rem" : "8rem 3rem" }}>
-      <div style={{ "max-width": "72rem", margin: "0 auto" }}>
-        <div style={{ "margin-bottom": "4rem" }}>
-          <h2 style={{ "font-size": isMobile() ? "2.25rem" : "3.5rem", "font-weight": "800", "margin-bottom": "1rem", "letter-spacing": "-0.04em" }}>
+    <section id="services" class="bg-gray-50 text-gray-900 px-6 py-16 md:px-12 md:py-32">
+      <div class="max-w-6xl mx-auto">
+        <div class="mb-16">
+          <h2 class="text-4xl md:text-6xl font-extrabold mb-4 tracking-tighter">
             Our Premium Services
           </h2>
-          <p style={{ color: "#4b5563", "font-size": "1.125rem", "max-width": "36rem" }}>
+          <p class="text-gray-600 text-lg max-w-2xl">
             We offer a curated selection of top-tier flooring options to meet the aesthetic and functional needs of any space.
           </p>
         </div>
-        <div style={{ display: "grid", "grid-template-columns": "repeat(auto-fit, minmax(320px, 1fr))", gap: "2.5rem" }}>
+        <div class="grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))] gap-10">
           <For each={services}>
             {(service) => (
-              <div style={{ 
-                display: "flex",
-                "flex-direction": "column",
-                gap: "1.5rem"
-              }}>
-                <img src={service.image} alt={service.alt} style={{ width: "100%", height: "320px", "object-fit": "cover", "border-radius": "4px" }} />
+              <div class="flex flex-col gap-6">
+                <img src={service.image} alt={service.alt} class="w-full h-80 object-cover rounded" />
                 <div>
-                  <h3 style={{ "font-size": "1.25rem", "font-weight": "700", "margin-bottom": "0.5rem", color: "#111827", "letter-spacing": "-0.02em" }}>
+                  <h3 class="text-xl font-bold mb-2 text-gray-900 tracking-tight">
                     {service.title}
                   </h3>
-                  <p style={{ "font-size": "1rem", color: "#4b5563", "line-height": "1.6" }}>
+                  <p class="text-base text-gray-600 leading-relaxed">
                     {service.description}
                   </p>
                 </div>
