@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://www.auriclapis.com/sitemap.xml
