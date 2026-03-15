@@ -4,6 +4,7 @@ import { Router, Route } from '@solidjs/router';
 import 'solid-devtools';
 import { MetaProvider } from '@solidjs/meta';
 
+import './index.css';
 import App from './App';
 import Home from './Home';
 import About from './About';
