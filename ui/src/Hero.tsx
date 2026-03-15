@@ -38,7 +38,11 @@ const Hero: Component = () => {
             Get an Estimate
           </a>
         </div>
-        <div style={{ width: "100%", height: isMobile() ? "400px" : "700px", "background-image": "url('https://images.pexels.com/photos/2215088/pexels-photo-2215088.jpeg?auto=compress&cs=tinysrgb&w=1200')", "background-size": "cover", "background-position": "center", "border-radius": "8px" }}></div>
+        <img 
+            src="https://images.unsplash.com/photo-1618220179428-22790b461013?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="A minimalist living room with light wood flooring and modern furniture."
+            style={{ width: "100%", height: isMobile() ? "400px" : "700px", "object-fit": "cover", "border-radius": "8px" }} 
+          />
       </div>
     </section>
   );
